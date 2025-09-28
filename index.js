@@ -16,7 +16,7 @@ app.get("/", (req, res) => {
 });
 
 app.post("/payment/create", async (req, res) => {
-  const total = req.query.total;
+  const { total } = req.body; //  get from request body
   if (total > 0) {
     const paymentIntent = await stripe.paymentIntents.create({
       amount: total,
@@ -35,4 +35,4 @@ app.listen(5000, (err) => {
   if (err) throw err;
   console.log("Amazon Server Running on PORT:http://localhost:5000");
 });
-// exports.api = onRequest(app);
+exports.api = onRequest(app);
