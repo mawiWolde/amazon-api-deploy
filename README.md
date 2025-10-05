@@ -38,7 +38,7 @@
 - [Acknowledgments](#acknowledgments)  
 
 ---
-
+ 
 ## 🚀 About The Project
 
 Evangadi Forum is a **Q&A platform** inspired by StackOverflow, designed for collaborative learning.  
