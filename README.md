@@ -1,44 +1,35 @@
-<!-- PROJECT HEADER -->
-# 📌 Group Project – [Project Name]
+# 🎓 Evangadi Forum – Group Project
 
 <div align="center">
-  <a href="https://github.com/your-team/project-name">
+  <a href="https://github.com/your-team/evangadi-forum">
     <img src="images/logo.png" alt="Logo" width="120" height="120">
   </a>
 
-  <h3 align="center">[Project Name]</h3>
+  <h3 align="center">Evangadi Forum – Q&A Platform</h3>
 
   <p align="center">
-    A collaborative full-stack group project built with modern web technologies.  
+    A collaborative full-stack group project where users can ask questions, post answers, and engage in discussions.  
+    Built with React, Vite, Node.js, Express, and MySQL.  
     <br />
-    <a href="https://github.com/your-team/project-name"><strong>Explore the docs »</strong></a>
+    <a href="https://github.com/your-team/evangadi-forum"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://your-demo-link.netlify.app">View Demo</a>
+    <a href="https://evangadi-forum-demo.netlify.app">View Demo</a>
     ·
-    <a href="https://github.com/your-team/project-name/issues">Report Bug</a>
+    <a href="https://github.com/your-team/evangadi-forum/issues">Report Bug</a>
     ·
-    <a href="https://github.com/your-team/project-name/issues">Request Feature</a>
+    <a href="https://github.com/your-team/evangadi-forum/issues">Request Feature</a>
   </p>
 </div>
-
----
-
-<!-- SHIELDS -->
-[![Contributors][contributors-shield]][contributors-url]
-[![Forks][forks-shield]][forks-url]
-[![Stargazers][stars-shield]][stars-url]
-[![Issues][issues-shield]][issues-url]
-[![MIT License][license-shield]][license-url]
 
 ---
 
 ## 📑 Table of Contents
 - [About the Project](#about-the-project)  
 - [Built With](#built-with)  
+- [API Documentation](#api-documentation)  
+- [Task Breakdown](#task-breakdown)  
 - [Getting Started](#getting-started)  
-  - [Prerequisites](#prerequisites)  
-  - [Installation](#installation)  
 - [Usage](#usage)  
 - [Roadmap](#roadmap)  
 - [Contributing](#contributing)  
@@ -50,20 +41,12 @@
 
 ## 🚀 About The Project
 
-[![Screenshot][product-screenshot]](https://example.com)
-
-This is a **group project** created to practice teamwork, software development, and deployment workflows.  
-
-Depending on the repo, this project may be:
-- 📖 **Evangadi Forum** – a Q&A platform  
-- 🛒 **Amazon Clone** – an e-commerce UI  
-- 🎬 **Netflix Clone** – a streaming interface  
-- 🎉 **Wedding Décor Portal** – business/event management  
-
-Our goals:
-- Practice **React, Vite, Node.js, and databases**  
-- Learn **GitHub collaboration and project management**  
-- Deliver a **fully functional app** with team contributions  
+Evangadi Forum is a **Q&A platform** inspired by StackOverflow, designed for collaborative learning.  
+Users can:  
+- Register and log in securely  
+- Ask questions  
+- Answer existing questions  
+- View and manage discussions  
 
 ---
 
@@ -76,18 +59,15 @@ Our goals:
 - [![MySQL][MySQL]][MySQL-url]  
 - [![MongoDB][MongoDB]][MongoDB-url]  
 - [![CSS Modules][CSSModules]][CSSModules-url]  
-- [![Tailwind][Tailwind]][Tailwind-url]  
 
 ---
 
-## ⚡ Getting Started
+## 📘 API Documentation
 
-Follow these instructions to set up the project locally.
-
-### ✅ Prerequisites
-- Node.js (v18+)  
-- npm or yarn  
-- MySQL or MongoDB  
-
-```sh
-npm install -g npm@latest
+### Authentication Middleware
+- **Endpoint**: `/api/user/checkUser` (GET)  
+- **Description**: Verifies authenticated user.  
+- **Headers**: `Authorization: Bearer token`  
+- **Success (200)**:
+```json
+{ "message": "Valid user", "username": "Kebede", "userid": "123" }
